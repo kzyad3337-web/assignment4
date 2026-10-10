@@ -93,4 +93,13 @@ button:disabled {
       .task button {
         flex: 1;
     }
-}
+
+    #taskList .empty-message {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+ }
+ }

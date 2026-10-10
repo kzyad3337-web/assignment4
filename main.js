@@ -7,12 +7,15 @@ const taskManager = new TaskManager();
 
 function renderTasks() {
     taskList.innerHTML = "";
+ if (taskManager.tasks.length === 0) {
+    const emptyMessage = document.createElement("p");
 
-if (taskManager.tasks.length === 0) {
-    taskList.textContent = "No tasks available.";
+    emptyMessage.className = "empty-message";
+    emptyMessage.textContent = "No tasks available.";
+
+    taskList.appendChild(emptyMessage);
     return;
-}
-
+  }
     taskManager.tasks.forEach(task => {
         const taskElement = document.createElement("div");
         taskElement.classList.add("task");
