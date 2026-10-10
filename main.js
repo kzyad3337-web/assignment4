@@ -27,6 +27,12 @@ if (taskManager.tasks.length === 0) {
         const toggleBtn = document.createElement("button");
         toggleBtn.textContent = "Toggle";
 
+        toggleBtn.setAttribute(
+        "aria-label",
+        `Toggle ${task.title}`
+   );
+
+
         toggleBtn.addEventListener("click", () => {
             taskManager.toggleTask(task.id);
             renderTasks();
@@ -34,6 +40,11 @@ if (taskManager.tasks.length === 0) {
 
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent = "Delete";
+
+             deleteBtn.setAttribute(
+             "aria-label",
+             `Delete ${task.title}`
+        );
         deleteBtn.classList.add("deleteBtn");
 
         deleteBtn.addEventListener("click", () => {
