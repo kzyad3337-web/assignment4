@@ -62,10 +62,10 @@ async function loadTasks() {
         taskManager.setTasks(tasks);
         renderTasks();
 
-        statusMessage.textContent = "";
+        statusMessage.textContent = "Tasks loaded successfully.";
 
     } catch (error) {
-        statusMessage.textContent = "Failed to load tasks.";
+        statusMessage.textContent = "Failed to load tasks. please try agaın";
         console.error("Error loading tasks:", error);
 
     } finally {
