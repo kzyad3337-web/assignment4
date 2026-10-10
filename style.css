@@ -90,4 +90,7 @@ button:disabled {
     .task span {
         flex-basis: 100%;
     }
+      .task button {
+        flex: 1;
+    }
 }
