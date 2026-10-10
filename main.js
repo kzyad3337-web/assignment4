@@ -81,13 +81,16 @@ async function loadTasks() {
         taskManager.setTasks(tasks);
         renderTasks();
 
-        statusMessage.textContent = "Tasks loaded successfully.";
-
-    } catch (error) {
+      if (tasks.length === 0) {
+      statusMessage.textContent = "No tasks found.";
+    } else {
+      statusMessage.textContent = "Tasks loaded successfully.";
+    }
+     } catch (error) {
         statusMessage.textContent = "Failed to load tasks. please try agaın";
         console.error("Error loading tasks:", error);
 
-    } finally {
+     } finally {
         loadTasksBtn.disabled = false;
     }
 }
